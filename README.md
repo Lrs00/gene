@@ -6,3 +6,5 @@ Gene_WT: Applied a Random Forest model on the debiased data, which had been proc
 The model was trained and tested exclusively on WT (wild-type) data
 
 SVD: Applied SVD method for data correction, one for WT and the other for all mutants. 
+
+SVD_WT: Applied a Random Forest model on the debiased data after SVD and the model was trained and tested exclusively on WT (wild-type) data
