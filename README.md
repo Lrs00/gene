@@ -26,7 +26,7 @@ We tested **four techniques**:
    [`phase2_q.n._30(5.18).ipynb`](phase2_q.n._30(5.18).ipynb)  
    [`phase2_q.n._31(5.18).ipynb`](phase2_q.n._31(5.18).ipynb)  
    [`phase2_q.n._32(5.18).ipynb`](phase2_q.n._32(5.18).ipynb)  
-   [`phase2_q.n._33(5.18).ipynb`](phase2_q.n._33(5.18).ipynb)  
+   [`phase2_q.n._33(5.18).ipynb`](phase2_q.n._99(5.18).ipynb)  
    [`phase2_q.n_within_slope_add99no33(5.18).ipynb`](phase2_q.n_within_slope_add99no33(5.18).ipynb)
 
 2. **Quantile normalization across plates**  
