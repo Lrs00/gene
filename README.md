@@ -63,11 +63,14 @@ We used the following metrics to assess and compare normalization methods:
 
 ## Testing
 
-We know some genes are expected to be sensitive to fast dynamic light based on previous experiments. To evaluate how they behave in our dataset, we first examined their performance in **Phase 1** (`phase1_check_genes.ipynb`) and **Phase 2** (`check_genes_comparison.ipynb`).
+We know some genes are expected to be sensitive to fast dynamic light based on previous experiments.  
+To evaluate how they behave in our dataset, we first examined their performance in  
+**[Phase 1](./phase1_check_genes.ipynb)** and **[Phase 2](./check_genes_comparison.ipynb)**.
 
 To establish a valid statistical test, we focused on **false discovery rate (FDR)** control.  
 1. For FDR calibration, we assigned *fake* mutants and genes to the full WT plate and examined the p-value distribution under the null.  
-2. Alternatively, we removed two WT samples per plate, treated them as fake mutants, and tested whether they could be detected (`phase2_test_take2WTout.ipynb`).
+2. Alternatively, we removed two WT samples per plate, treated them as fake mutants, and tested whether they could be detected  
+   ([`phase2_test_take2WTout.ipynb`](./phase2_test_take2WTout.ipynb)).
 
-In **Phase 1** (`phase1_test_pool_shrvar_new_one_sided1.ipynb`) and **Phase 2** (`phase2_test_shrvar_new_one_sided1.ipynb`), we applied both paired t tests and **Empirical Partially Bayesian (EPB)** multiple testing to identify significant effects after batch effect correction.
+In **[Phase 1](./phase1_test_pool_shrvar_new_one_sided1.ipynb)** and **[Phase 2](./phase2_test_shrvar_new_one_sided1.ipynb)**, we applied both paired t-tests and **Empirical Partially Bayesian (EPB)** multiple testing to identify significant effects after batch-effect correction.  
 
