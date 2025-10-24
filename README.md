@@ -2,11 +2,11 @@
 
 ## Batch Effect Correction and Normalization Pipelines
 
-This repository documents the normalization and batch-effect correction approaches used in **Phase 1** and **Phase 2** of the analysis.
+This repository documents the normalization and batch effect correction approaches used in **Phase 1** and **Phase 2** of the analysis.
 
 ---
 
-## Phase 1
+### Phase 1
 
 We tested **two normalization techniques**:
 
@@ -18,7 +18,7 @@ We tested **two normalization techniques**:
 
 ---
 
-## Phase 2
+### Phase 2
 
 We tested **four techniques**:
 
@@ -26,7 +26,7 @@ We tested **four techniques**:
    [`phase2_q.n._30(5.18).ipynb`](phase2_q.n._30(5.18).ipynb)  
    [`phase2_q.n._31(5.18).ipynb`](phase2_q.n._31(5.18).ipynb)  
    [`phase2_q.n._32(5.18).ipynb`](phase2_q.n._32(5.18).ipynb)  
-   [`phase2_q.n._33(5.18).ipynb`](phase2_q.n._99(5.18).ipynb)  
+   [`phase2_q.n._99(5.18).ipynb`](phase2_q.n._99(5.18).ipynb)  
    [`phase2_q.n_within_slope_add99no33(5.18).ipynb`](phase2_q.n_within_slope_add99no33(5.18).ipynb)
 
 2. **Quantile normalization across plates**  
@@ -41,7 +41,7 @@ We tested **four techniques**:
 
 ---
 
-## Bayesian Model Description
+### Bayesian Model Description
 
 Both Bayesian models are based on the same hierarchical model defined in  
 [`mutant_plate_model2.stan`](mutant_plate_model2.stan):
@@ -51,7 +51,7 @@ Both Bayesian models are based on the same hierarchical model defined in
 
 ---
 
-## Evaluation Metrics
+### Evaluation Metrics
 
 We used the following metrics to assess and compare normalization methods:
 
@@ -60,3 +60,14 @@ We used the following metrics to assess and compare normalization methods:
 
 2. **Residual batch effects** after correction  
    [`test_plate_effect1.ipynb`](test_plate_effect1.ipynb)
+
+## Testing
+
+We know some genes are expected to be sensitive to fast dynamic light based on previous experiments. To evaluate how they behave in our dataset, we first examined their performance in **Phase 1** (`phase1_check_genes.ipynb`) and **Phase 2** (`check_genes_comparison.ipynb`).
+
+To establish a valid statistical test, we focused on **false discovery rate (FDR)** control.  
+1. For FDR calibration, we assigned *fake* mutants and genes to the full WT plate and examined the p-value distribution under the null.  
+2. Alternatively, we removed two WT samples per plate, treated them as fake mutants, and tested whether they could be detected (`phase2_test_take2WTout.ipynb`).
+
+In **Phase 1** (`phase1_test_pool_shrvar_new_one_sided1.ipynb`) and **Phase 2** (`phase2_test_shrvar_new_one_sided1.ipynb`), we applied both paired t tests and **Empirical Partially Bayesian (EPB)** multiple testing to identify significant effects after batch effect correction.
+
