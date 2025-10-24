@@ -64,8 +64,7 @@ We used the following metrics to assess and compare normalization methods:
 ## Testing
 
 We know some genes are expected to be sensitive to fast dynamic light based on previous experiments.  
-To evaluate how they behave in our dataset, we first examined their performance in  
-**[Phase 1](./phase1_check_genes.ipynb)** and **[Phase 2](./check_genes_comparison.ipynb)**.
+To evaluate how they behave in our dataset, we first examined their performance in  **[Phase 1](./phase1_check_genes.ipynb)** and **[Phase 2](./check_genes_comparison.ipynb)**.
 
 To establish a valid statistical test, we focused on **false discovery rate (FDR)** control.  
 1. For FDR calibration, we assigned *fake* mutants and genes to the full WT plate and examined the p-value distribution under the null.  
